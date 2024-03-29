@@ -1,0 +1,139 @@
+# Site settings
+title: Samuel Knox
+email: hi@knoxsamuel.com
+author: Samuel Knox
+description: >- # ignore newlines
+  🚧 site under construction! 🛠️
+baseurl: ""
+url: "https://knoxsamuel.com" # base hostname
+github_username: knoxSamuel
+
+# Navigation links
+navbar-links:
+  About Me: "/about/"
+  Blog: "/blog/"
+  Staff: "/staff/"
+  Home: "/"
+
+# Footer
+social-network-links:
+  email: "hi@knoxsamuel.com"
+  rss: true
+  github: knoxSamuel
+  linkedin: knoxsamuel
+
+rss-description: my words on your box
+
+# Site config
+include: [_pages]
+theme: beautiful-jekyll-theme
+
+url-pretty: "knoxsamuel.com"
+title-on-all-pages: true
+keywords: "knox,samuel,software,computer,science,github,linkedin,oregon,state,university,OSU,osu"
+
+date_format: "%B %-d, %Y" # Ruby Date Format
+excerpt_length: 50 # Truncate post on the feed page
+feed_show_excerpt: true
+feed_show_tags: true
+post_search: true
+navbar-var-length: true
+
+# Colors
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
+#cloudflare_analytics: ""
+
+# BASE SETTINGS
+#
+lsi: false
+safe: false
+source: "./"
+incremental: false
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+timezone: "America/Chicago"
+
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  input: GFM
+collections:
+  authors:
+    output: true
+
+# Build settings
+defaults:
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      layout: post
+      isPost: true
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      layout: default
+      isPost: false
+
+# Exclude these files from prod
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - docs/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
