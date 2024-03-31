@@ -12,7 +12,6 @@ github_username: knoxSamuel
 navbar-links:
   About Me: "/about/"
   Blog: "/blog/"
-  Staff: "/staff/"
   Home: "/"
 
 # Footer
@@ -84,17 +83,9 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
   input: GFM
-collections:
-  authors:
-    output: true
 
 # Build settings
 defaults:
-  - scope:
-      path: ""
-      type: authors
-    values:
-      layout: author
   - scope:
       path: _posts
       type: posts
@@ -136,4 +127,3 @@ pagination:
   trail:
     before: 2
     after: 2
-
